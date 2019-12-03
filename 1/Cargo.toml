@@ -1,5 +1,5 @@
 [package]
-name = "mass_calculator"
+name = "fuel_calculator"
 version = "0.1.0"
 authors = ["Robin <robinsilverhav@gmail.com>"]
 edition = "2018"
