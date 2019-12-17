@@ -5,18 +5,25 @@ use std::hash::{Hash, Hasher};
 pub struct Position {
     pub x: i32,
     pub y: i32,
+    pub distance: i32,
 }
 
 impl Position {
+    pub fn new(x: i32, y: i32) -> Position {
+        Position { x, y, distance: 0 }
+    }
+
     pub fn add(&mut self, position: &Position) {
         self.x += position.x;
         self.y += position.y;
+        self.distance += 1;
     }
 
     pub fn clone(&self) -> Position {
         return Position {
             x: self.x,
             y: self.y,
+            distance: self.distance,
         };
     }
 
